@@ -40,7 +40,7 @@ func watcher() {
 	}()
 
 	// Add a path.
-	err = watcher.Add("./tmp")
+	err = watcher.Add("C:/Coding/Code/GitHub/file.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
