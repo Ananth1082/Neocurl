@@ -1,0 +1,27 @@
+#EXAMPLE COLLECTION
+SET local1=val1
+    local2=val1
+IN .env
+
+#SIMPLE GET
+GET https://www.google.com
+OUT index.html
+
+#SIMPLE POST
+POST https://lableak.onrender.com/d/cnc/lab_1
+HEADER Authorization=Bearer 123456 
+  Content-Type=multipart/form-data
+BODY file=@"./test.pdf" 
+  attachments=@~/images/img1.png @~/image/img2.png
+OUT output.log
+
+#IMPORT-EXPORT TEST REQUEST
+IN ./test.xlsx
+POST https://test-website.com/sdffnewo?img=$img_res&format=$format
+HEADER Content-Type=application/json
+BODY  {
+        foo:<-@file1.json
+        bar:<-@file2.json
+      }
+OUT STDOUT 
+(by default)

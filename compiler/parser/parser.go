@@ -1,6 +1,8 @@
 package parser
 
-import "os"
+import (
+	"os"
+)
 
 func ReadFile(filePath string) (string, error) {
 	filebyt, err := os.ReadFile(filePath)
@@ -11,5 +13,5 @@ func ReadFile(filePath string) (string, error) {
 }
 
 func Separtor(program string) []string {
-
+	return []string{""}
 }
