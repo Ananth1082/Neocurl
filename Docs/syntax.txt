@@ -1,0 +1,23 @@
+#<Collection_Alias>
+
+[SET] varaible list...
+
+#<Request_Name>
+[IN] @<import_path>
+VERB <url>
+[HEAD] <key> = <val> OR JSON'{}'
+[BODY] <"request_body">
+[OUT] @<file_path>
+[MSG] "Some msg for the request"
+
+
+---
+Code snippets
+
+0) alias code block: #Name
+1) file path: @file_path
+2) file extraction: <-@file_path
+3) variable init: key=value
+4) get vaaraible value: $var_name
+5) Content type (for body): MIME_TYPE'' shortcut for TEXT'' => ""
+6) Type inference: TYPE<-@file_path 
