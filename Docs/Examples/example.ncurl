@@ -1,8 +1,20 @@
-#EXAMPLE COLLECTION
+#EXAMPLE COLLECTION     
 SET local1=val1
     local2=val1
 IN .env
+      
 
+
+
+
+
+         
+
+           
+            
+             
+              
+               
 #SIMPLE GET
 GET https://www.google.com
 OUT index.html
@@ -24,4 +36,3 @@ BODY  {
         bar:<-@file2.json
       }
 OUT STDOUT 
-(by default)

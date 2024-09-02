@@ -1,4 +1,4 @@
-#<Collection_Alias>
+collection Collection_name
 
 [SET] varaible list...
 
