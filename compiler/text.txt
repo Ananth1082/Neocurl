@@ -1,5 +1,0 @@
-SET (?:(?:(?P<key>[[:word:]]+)=(?P<value>[[:word:]/]+)\n)+)?
-
-IN(?P<filepath> @.?[[:word:]]+)+
-
-filepath extractor: @"(\S*)"

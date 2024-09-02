@@ -1,0 +1,12 @@
+#Collection_name
+SET key1="value1"
+key2="value2"
+#Request1
+POST "http://localhost:8080"
+HEAD {
+  "Content-Type":"text/plain",
+  "User-Agent":"Ananth"
+}
+BODY Hello world
+#Request2
+GET "http://localhost:8080"
