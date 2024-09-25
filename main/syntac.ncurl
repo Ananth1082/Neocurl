@@ -1,0 +1,13 @@
+CONN SOCK::localhost:8080
+
+END 5000 "Timeout occured bye!!"
+
+
+SEND (TEXT) "HEllo server!!"
+MSG => 
+
+ON :
+  MSG (TEXT) "meta-data" => DELAY 100 SEND (TEXT/JSON/1024)<-@meta.json
+  MSG (TEXT) "send the image file" => SEND (BYTE/1024)<-@image.png
+  MSG (TEXT/REGEX) "sent to id (?P<info>: .*), Thank you" => @!id<-$info #flush and write
+  MSG (TEXT) "server stress test" => STOP 100 (BYTE/1024)<-IN

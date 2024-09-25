@@ -1,12 +1,26 @@
 #Collection_name
+
+CONN "https://localhost:8080" 
 SET key1="value1"
 key2="value2"
+
 #Request1
-POST "http://localhost:8080"
+POST "/post/send"
 HEAD {
   "Content-Type":"text/plain",
   "User-Agent":"Ananth"
 }
-BODY Hello world
+
+
+BODY (TEXT) Hello world
+(BYTES) jsdnfij sdijfsdfk fjs fmsdf sdjf sdmf sdfkjds f sd
+
+(JSON) {
+  "foo":"bar",
+}
+
+(JSON/hello.json)
+
+()
 #Request2
-GET "http://localhost:8080"
+GET "/get/info"
